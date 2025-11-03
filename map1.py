@@ -5,6 +5,7 @@ data = pandas.read_csv("Webmap_datasources/Volcanoes.txt")
 latitude = list(data["LAT"])
 longitude = list(data["LON"])
 name = list(data["NAME"])
+elev = list(data["ELEV"])
 
 
 map = folium.Map(
@@ -14,8 +15,8 @@ map = folium.Map(
     )
 fg = folium.FeatureGroup(name = "My Map")
 
-for lt, ln, nm in zip(latitude, longitude, name):
-        fg.add_child(folium.Marker(location = [lt, ln], popup = "This is " + nm + " volcano", icon = folium.Icon(color = 'green')))
+for lt, ln, el in zip(latitude, longitude, elev):
+        fg.add_child(folium.Marker(location = [lt, ln], popup = "Elevation here is: " + str(el) + "m", icon = folium.Icon(color = 'purple')))
 
 
 map.add_child(fg)
