@@ -61,3 +61,12 @@ VOLCANX020,NUMBER,NAME,LOCATION,STATUS,ELEV,TYPE,TIMEFRAME,LAT,LON
 584.000000000000000,1203-20-,Amboy,US-California,Holocene,288.000000000000000,Cinder cone,U,34.5499992,-115.7809982
 586.000000000000000,1210-02-,Zuni-Bandera,US-New Mexico,Anthropology,2550.000000000000000,Volcanic field,D7,34.7999992,-108.0009995
 588.000000000000000,1210-01-,Carrizozo,US-New Mexico,Holocene,1731.000000000000000,Cinder cone,U,33.7801018,-105.9309998
+589.—,0001-01--,Teide,Spain-Tenerife,Historical,3715.000000000000000,Stratovolcano,D?,28.27277,-16.64233
+590.—,0002-01--,Cotopaxi,Ecuador,Active,5897.000000000000000,Stratovolcano,D?,-0.677,-78.436
+591.—,0003-01--,Cayambe,Ecuador,Active,5790.000000000000000,Complex volcano,D?,0.000085,-78.000999
+592.—,0004-01--,Mount Kilimanjaro,Tanzania,African dormant,5895.000000000000000,Stratovolcano,D?,-3.0674,37.3556
+593.—,0005-01--,Mount Nyiragongo,DR Congo,Active,3470.000000000000000,Stratovolcano,D?,-1.5167,29.2500
+594.—,0006-01--,Erta Ale,Ethiopia,Active,613.000000000000000,Shield volcano,D?,13.6000,40.6667
+595.—,0007-01--,Mount Elbrus,Russia (Caucasus),Dormant,5642.000000000000000,Stratovolcano,D?,43.3499,42.4453
+596.—,0008-01--,Ulawun,Papua New Guinea,Active,2334.000000000000000,Stratovolcano,D?,-5.1700,151.3000
+
