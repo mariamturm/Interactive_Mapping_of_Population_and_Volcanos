@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f0406e212d9fe82c978d6f186f7e8f4e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f0406e212d9fe82c978d6f186f7e8f4e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f0406e212d9fe82c978d6f186f7e8f4e = L.map(
+                "map_f0406e212d9fe82c978d6f186f7e8f4e",
+                {
+                    center: [38.58, -99.09],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_665f22193debac2c3979830f0188edd5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_665f22193debac2c3979830f0188edd5.addTo(map_f0406e212d9fe82c978d6f186f7e8f4e);
+        
+    
+            var feature_group_220dd1c6c6f75a8c7606a53df5892028 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d668417a9506399eae44d5539c58a5ca = L.marker(
+                [38.2, -99.1],
+                {
+}
+            ).addTo(feature_group_220dd1c6c6f75a8c7606a53df5892028);
+        
+    
+            var icon_08781ec0da78fd93c8c63172c841ca6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e35e3576dc2528bf6466e4ceb0b142e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0000dee371f010d8d82418f38bc960c9 = $(`<div id="html_0000dee371f010d8d82418f38bc960c9" style="width: 100.0%; height: 100.0%;">Hi I am a Marker</div>`)[0];
+                popup_e35e3576dc2528bf6466e4ceb0b142e7.setContent(html_0000dee371f010d8d82418f38bc960c9);
+            
+        
+
+        marker_d668417a9506399eae44d5539c58a5ca.bindPopup(popup_e35e3576dc2528bf6466e4ceb0b142e7)
+        ;
+
+        
+    
+    
+                marker_d668417a9506399eae44d5539c58a5ca.setIcon(icon_08781ec0da78fd93c8c63172c841ca6f);
+            
+    
+            var marker_147a3bbf4d480ae7e240e3f88f53703e = L.marker(
+                [39.2, -97.1],
+                {
+}
+            ).addTo(feature_group_220dd1c6c6f75a8c7606a53df5892028);
+        
+    
+            var icon_56b4424d8d8b1041933cabf91d59c95c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3531cee11783b44921cb602392634e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aacdc92a5b06fb6ad862d37cb5d8d7a2 = $(`<div id="html_aacdc92a5b06fb6ad862d37cb5d8d7a2" style="width: 100.0%; height: 100.0%;">Hi I am a Marker</div>`)[0];
+                popup_c3531cee11783b44921cb602392634e9.setContent(html_aacdc92a5b06fb6ad862d37cb5d8d7a2);
+            
+        
+
+        marker_147a3bbf4d480ae7e240e3f88f53703e.bindPopup(popup_c3531cee11783b44921cb602392634e9)
+        ;
+
+        
+    
+    
+                marker_147a3bbf4d480ae7e240e3f88f53703e.setIcon(icon_56b4424d8d8b1041933cabf91d59c95c);
+            
+    
+            feature_group_220dd1c6c6f75a8c7606a53df5892028.addTo(map_f0406e212d9fe82c978d6f186f7e8f4e);
+        
+</script>
+</html>
