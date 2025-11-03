@@ -1,2 +1,4 @@
-for coordinates in [[38.2, -99.1],[39.2, -97.1]]:
-#     fg.a
+folium.CircleMarker(
+#         location = [38.58, -99.09], 
+#         radius = 10,
+# ).add
