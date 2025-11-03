@@ -22,10 +22,10 @@ map = folium.Map(
     tiles = "CartoDB positron",
     )
 
-fg = folium.FeatureGroup(name = "My Map")
+fgv = folium.FeatureGroup(name = "Volcanos")
 
 for lt, ln, el, nm in zip(latitude, longitude, elev, name):
-        fg.add_child(
+        fgv.add_child(
             folium.CircleMarker(
                 location = [lt, ln], 
                 popup = "This is " + nm + " volcano", 
@@ -36,7 +36,9 @@ for lt, ln, el, nm in zip(latitude, longitude, elev, name):
             )
         )
 
-fg.add_child(
+fgp = folium.FeatureGroup(name = "Population")
+
+fgp.add_child(
         folium.GeoJson(
                 data = open("Webmap_datasources/world.json", "r", encoding='utf-8-sig').read(),
                 style_function=lambda x: {
@@ -50,7 +52,12 @@ fg.add_child(
                         )
                 )
 
-map.add_child(fg)
+
+map.add_child(fgp)
+map.add_child(fgv)
+map.add_child(folium.LayerControl())
+
+
 map.save("Map1.html")
 
 print(len(elev))
