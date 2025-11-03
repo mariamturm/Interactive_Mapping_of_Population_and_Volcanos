@@ -36,6 +36,19 @@ for lt, ln, el, nm in zip(latitude, longitude, elev, name):
             )
         )
 
+fg.add_child(
+        folium.GeoJson(
+                data = open("Webmap_datasources/world.json", "r", encoding='utf-8-sig').read(),
+                style_function=lambda x: {
+                        'fillColor':
+                            'yellow' if x['properties']['POP2005'] < 5000000 else
+                            'green' if x['properties']['POP2005'] < 15000000 else 'purple',
+                            'color': 'gray',
+                            'weight': 1.2,
+                            'fillOpacity': 0.2
+                             }
+                        )
+                )
 
 map.add_child(fg)
 map.save("Map1.html")
