@@ -69,4 +69,14 @@ VOLCANX020,NUMBER,NAME,LOCATION,STATUS,ELEV,TYPE,TIMEFRAME,LAT,LON
 594.—,0006-01--,Erta Ale,Ethiopia,Active,613.000000000000000,Shield volcano,D?,13.6000,40.6667
 595.—,0007-01--,Mount Elbrus,Russia (Caucasus),Dormant,5642.000000000000000,Stratovolcano,D?,43.3499,42.4453
 596.—,0008-01--,Ulawun,Papua New Guinea,Active,2334.000000000000000,Stratovolcano,D?,-5.1700,151.3000
+597.—,0009-01--,Mount Fuji,Japan,Active/Dormant,3776.000000000000000,Stratovolcano,D?,35.363602,138.726379  
+598.—,0010-01--,Popocatépetl,Mexico,Active,5393.000000000000000,Stratovolcano,D?,19.02254,-98.628014  
+599.—,0011-01--,Teide,Spain-Tenerife,Historical,3715.000000000000000,Stratovolcano,D?,28.27277,-16.64233  
+600.—,0012-01--,Cotopaxi,Ecuador,Active,5897.000000000000000,Stratovolcano,D?,-0.677,-78.436  
+601.—,0013-01--,Cayambe,Ecuador,Active,5790.000000000000000,Complex volcano,D?,0.000085,-78.000999  
+602.—,0014-01--,Mount Nyiragongo,DR Congo,Active,3470.000000000000000,Stratovolcano,D?,-1.5167,29.2500  
+603.—,0015-01--,Erta Ale,Ethiopia,Active,613.000000000000000,Shield volcano,D?,13.6000,40.6667  
+604.—,0016-01--,Mount Elbrus,Russia (Caucasus),Dormant,5642.000000000000000,Stratovolcano,D?,43.3499,42.4453  
+605.—,0017-01--,Ulawun,Papua New Guinea,Active,2334.000000000000000,Stratovolcano,D?,-5.1700,151.3000  
+606.—,0018-01--,San Vicente (Chichontepec),El Salvador,Holocene?,2182.000000000000000,Stratovolcano,D?,13.634,-88.782  
 
