@@ -1,18 +1,64 @@
 import folium
+import pandas
+
+data = pandas.read_csv("Webmap_datasources/Volcanoes.txt")
+latitude = list(data["LAT"])
+longitude = list(data["LON"])
+name = list(data["NAME"])
+elev = list(data["ELEV"])
+
+def color_producer(elevation):
+        if elevation <= 1500:
+               return 'green'
+        elif elevation > 1500 and elevation <= 3000:
+                return 'orange'
+        else:
+                return 'red'
+
+
 map = folium.Map(
     location = [38.58, -99.09], 
     zoom_start = 6, 
     tiles = "CartoDB positron",
-    #tiles = "Stamen Terrain",
-    #attr='Map tiles by Stamen Design, CC BY 3.0 — Map data © OpenStreetMap'
     )
-fg = folium.FeatureGroup(name = "My Map")
-#fg.add_child(folium.Marker(location = [38.2, -99.1], popup = "Hi I am a Marker", icon = folium.Icon(color = 'green')))
-#fg.add_child(folium.Marker(location = [37.2, -89.1], popup = "Hi I am a Marker", icon = folium.Icon(color = 'green')))
 
-for coordinates in [[38.2, -99.1],[39.2, -97.1]]:
-    fg.add_child(folium.Marker(location = coordinates, popup = "Hi I am a Marker", icon = folium.Icon(color = 'green')))
+fgv = folium.FeatureGroup(name = "Volcanos")
+
+for lt, ln, el, nm in zip(latitude, longitude, elev, name):
+        fgv.add_child(
+            folium.CircleMarker(
+                location = [lt, ln], 
+                popup = "This is " + nm + " volcano", 
+                color = color_producer(el), 
+                radius = 7, 
+                fill = True,
+                fill_opacity = 0.8
+            )
+        )
+
+fgp = folium.FeatureGroup(name = "Population")
+
+fgp.add_child(
+        folium.GeoJson(
+                data = open("Webmap_datasources/world.json", "r", encoding='utf-8-sig').read(),
+                style_function=lambda x: {
+                        'fillColor':
+                            'yellow' if x['properties']['POP2005'] < 5000000 else
+                            'green' if x['properties']['POP2005'] < 15000000 else 'purple',
+                            'color': 'gray',
+                            'weight': 1.2,
+                            'fillOpacity': 0.2
+                             }
+                        )
+                )
 
 
-map.add_child(fg)
+map.add_child(fgp)
+map.add_child(fgv)
+map.add_child(folium.LayerControl())
+
+
 map.save("Map1.html")
+
+print(len(elev))
+print(min(elev), max(elev))
